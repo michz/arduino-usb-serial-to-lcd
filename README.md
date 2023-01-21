@@ -8,6 +8,7 @@ Raw characters are passed tgrough.
 ## Requirements
 
 * Arduino Pro Mini compatible board with atmega328
+* Alternatively: Digispark Kickstarter
 * Recent Python3 version
 * Python venv
 
@@ -22,8 +23,11 @@ python3 -m pip install -r requirements.txt
 # Build only:
 platformio run
 
-# (Build if necessary and) upload:
-platformio run --upload-port /dev/ttyUSB0 -t upload
+# (Build if necessary and) upload to Arduino Pro Mini:
+platformio run --environment arduino-pro-mini --upload-port /dev/ttyUSB0 -t upload
+
+# (Build if necessary and) upload to Digispark Kickstarter:
+platformio run --environment digispark-tiny --upload-port /dev/ttyUSB0 -t upload
 ```
 
 
